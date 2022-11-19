@@ -329,10 +329,81 @@ This is code link [`Code Link to Github`](www.github.com)
 
 Reference-style links are a special kind of link that make URLs easier to display and read. Reference-style links are constructed in two parts: the part you keep inline with your text and the part you store somewhere else in the file so that the text is easy to read.
 
-In reference-style link, two pair of brackets are used. To use the first
+In reference-style link, two pair of brackets are used. The first pair of brackets is used as the name of the link. While the second pair is a label that is used to point to the actual link you're storing somewhere in your document. For the actual link, the label (in brackets), followed immediately by a colon and at least one space `[label]: www.link.com`. The URL for the link can be enclosed with angle brackets (optional) `[label]: <www.link.com>`. Then for the link title, you can use either double quotes, quotes, or parentheses `[label]: www.link.com "double brackets title"`. Here is an example
 
+##### Markdown
+```
+The brackets:
+[This Links to Google][label]
 
+The actual link:
+[label]: www.google.com "SOME COOL TITLE"
+[label]: <www.goggle.com> 'SOME COOL TITLE'
+[label]: www.google.com (SOME COOL TITLE)
+```
 
+##### Output
+The brackets:  
+[This Links to Google][label]
+
+The actual link (references):  
+[label]: www.google.com "SOME COOL TITLE"  
+[label]: <www.goggle.com> 'SOME COOL TITLE'  
+[label]: www.google.com (SOME COOL TITLE)  
+
+***
+
+## Images
+
+To add an image, add an exclamation mark (!), followed by alt text in brackets, and the path or URL to the image asset in parentheses. You can optionally add a title in quotation marks after the path or URL. You can also add a link to an image by enclose the Markdown for image in brackets, and then add the link in parentheses. Here are the examples
+
+##### Markdown
+```
+Normal image:
+![Github Logo](https://id.wizcase.com/wp-content/uploads/2022/03/GitHub-Logo.png "This is Github Logo from the internet")
+
+Image with link
+[![Github Logo](https://id.wizcase.com/wp-content/uploads/2022/03/GitHub-Logo.png "Click here to go to Github")](www.github.com)
+```
+
+##### Output
+Normal Image:  
+![Github Logo](https://id.wizcase.com/wp-content/uploads/2022/03/GitHub-Logo.png "This is Github Logo from the internet")
+
+Image with link:  
+[![Github Logo](https://id.wizcase.com/wp-content/uploads/2022/03/GitHub-Logo.png "Click here to go to Github")](www.github.com)
+
+***
+
+## Escaping Characters
+
+To display a literal character that would otherwise be used to format text in Markdown document, add a backlash (\) in front of the character. Here are the examples
+
+##### Markdown
+```
+\- Without the backslash, this would be an unordered list. But now its just a normal dash
+```
+
+##### Output
+\- Without the backslash, this would be an unordered list. But now its just a normal dash
+
+#### Characters You Can Escape
+| Character                | Name                      |
+|------------------------- | ------------------------- |
+| \\      | backslash        |
+| \`      | backtick         |
+| \*      | asterisk         |
+| \_      | underscore       |
+| \{}     | curly brackets   |
+| \[]     | brackets         |
+| \<>     | angle brackets   |
+| \()     | parentheses      |
+| \#      | pound sign       |
+| \+      | plus sign        |
+| \-      | minus sign (dash)|
+| \.      | dot              |
+| \!      | exclamation mark |
+| \|      | pipe             |
  
  
 
